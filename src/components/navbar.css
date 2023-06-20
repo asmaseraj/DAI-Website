@@ -1,0 +1,226 @@
+.NavbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  width: 95%;
+  height: 110px;
+  position: fixed;
+  top: 20px;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 13px;
+  z-index: 10000;
+  background-color: rgba(188, 209, 246, 0.95);
+}
+
+.navbar-logo {
+  display: grid;
+  color: #222;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  width: 183px;
+  height: 98px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-menu {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-gap: 8px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+.nav-links:hover {
+  background-color: rgba(186, 245, 201, 0.95);
+  border-radius: 6px;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.nav-links-mobile {
+  display: none;
+}
+
+.NavbarItems button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.NavbarItems button:hover {
+  background-color: rgba(186, 245, 201, 0.95);
+  color: black;
+  border-radius: 6px;
+}
+.menu-icons {
+  display: none;
+}
+@media screen and (max-width: 1030px) {
+  .NavbarItems {
+    height: 110px;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    background-color: rgba(188, 209, 246, 0.95);
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 20px 0 30px 0;
+    margin-top: 120px;
+    margin-left: 60%;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+  }
+  .navbar-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .nav-links:hover {
+    background: rgbrgba(186, 245, 201, 0.95);
+    transition: none;
+  }
+  button {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 6px;
+    width: 80%;
+    text-decoration: none;
+    background: rgba(186, 245, 201, 0.95);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .menu-icons {
+    display: block;
+    cursor: pointer;
+  }
+  .menu-icons i {
+    font-size: 1.2rem;
+    color: #222;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .NavbarItems {
+    height: 90px;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+    width: 40%;
+    /* height: auto; */
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 20px 0 30px 0;
+    margin-top: 100px;
+    margin-left: 60%;
+    margin-bottom: 100px;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+    background-color: rgba(188, 209, 246, 0.95);
+  }
+  .navbar-logo {
+    display: grid;
+    color: #222;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    width: 130px;
+    height: 70px;
+    transition: 0.3s ease-in-out;
+  }
+  .navbar-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .nav-links:hover {
+    background: rgba(186, 245, 201, 0.95);
+    transition: none;
+  }
+  button {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 6px;
+    width: 80%;
+    text-decoration: none;
+    background: rgba(188, 209, 246, 0.95);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .menu-icons {
+    display: block;
+    cursor: pointer;
+  }
+  .menu-icons i {
+    font-size: 1.2rem;
+    color: #222;
+  }
+}
