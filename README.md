@@ -1,2 +1,2 @@
-# DAI-Website
-DAI website
+npm i && npm start
+
